@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registrar.css">
+    <title>Registro</title>
+</head>
+
+<body>
+    <section>
+        <table>
+            <thead>
+                <tr>
+                    <th>DOCUMENT</th>
+                    <th>NAME</th>
+                    <th>EMAIL</th>
+                    <th>PHONE</th>
+                    <th>ACTIONS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>99986622</td>
+                    <td>jaime andres lopez</td>
+                    <td>jalopez@gmail.com</td>
+                    <td>333-336666</td>
+                    <td>
+                        <button id="btnDetalle">Ver detalle</button>
+                        <button id="btnEditar"> Editar</button>
+                        <button
+                            onclick="window.open('https://www.w3schools.com/howto/howto_css_delete_modal.asp');">Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>99986622</td>
+                    <td>jaime andres lopez</td>
+                    <td>jalopez@gmail.com</td>
+                    <td>333-336666</td>
+                    <td>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>99986622</td>
+                    <td>jaime andres lopez</td>
+                    <td>jalopez@gmail.com</td>
+                    <td>333-336666</td>
+                    <td>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>99986622</td>
+                    <td>jaime andres lopez</td>
+                    <td>jalopez@gmail.com</td>
+                    <td>333-336666</td>
+                    <td>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>99986622</td>
+                    <td>jaime andres lopez</td>
+                    <td>jalopez@gmail.com</td>
+                    <td>333-336666</td>
+                    <td>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>99986622</td>
+                    <td>jaime andres lopez</td>
+                    <td>jalopez@gmail.com</td>
+                    <td>333-336666</td>
+                    <td>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>99986622</td>
+                    <td>jaime andres lopez</td>
+                    <td>jalopez@gmail.com</td>
+                    <td>333-336666</td>
+                    <td>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>99986622</td>
+                    <td>jaime andres lopez</td>
+                    <td>jalopez@gmail.com</td>
+                    <td>333-336666</td>
+                    <td>
+
+                    </td>
+                </tr>
+
+
+            </tbody>
+        </table>
+
+    </section>
+
+    <footer></footer>
+
+    <div id="modalDetalle" class="modal">
+        <div class="modal-content">
+            <span class="close" id="cerrarDetalle">&times;</span>
+            <form>
+                <label for="detalleDocumento">Documento:</label>
+                <input type="text" id="detalleDocumento" disabled>
+
+                <label for="detalleNombre">Usuario:</label>
+                <input type="text" id="detalleNombre" disabled>
+
+                <label for="detalleEmail">Email:</label>
+                <input type="email" id="detalleEmail" disabled>
+
+                <label for="detalleTelefono">Telefono:</label>
+                <input type="text" id="detalleTelefono" disabled>
+
+                <label for="detalleEspecialidad">Especialidad:</label>
+                <input type="text" id="detalleEspecialidad" value="28441" disabled>
+
+                <label for="detalleCronograma">Cronograma:</label>
+                <input type="text" id="detalleCronograma" value="ADSO" disabled>
+
+                <div class="modal-footer">
+                    <input type="reset" value="Limpiar">
+                    <input type="submit" value="Ingresar" onclick="login()">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="modalEditar" class="modal">
+        <div class="modal-content">
+            <span class="close" id="cerrarEditar">&times;</span>
+            <form>
+                <label for="editarDocumento">Documento:</label>
+                <input type="text" id="editarDocumento" disabled>
+
+                <label for="editarNombre">Usuario:</label>
+                <input type="text" id="editarNombre">
+
+                <label for="editarEmail">Email:</label>
+                <input type="email" id="editarEmail">
+
+                <label for="editarTelefono">Telefono:</label>
+                <input type="text" id="editarTelefono">
+
+                <label for="editarEspecialidad">Especialidad:</label>
+                <input type="text" id="editarEspecialidad" value="28441">
+
+                <label for="editarCronograma">Cronograma:</label>
+                <input type="text" id="editarCronograma" value="ADSO">
+
+                <div class="modal-footer">
+                    <input type="reset" value="Limpiar">
+                    <input type="submit" value="Ingresar" onclick="login()">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let modal = document.getElementById("modalDetalle");
+        let modal2 = document.getElementById("modalEditar");
+
+        let btn = document.getElementById("btnDetalle");
+        let btn2 = document.getElementById("btnEditar");
+
+        let span = document.getElementById("cerrarDetalle"); 
+        let span2 = document.getElementById("cerrarEditar"); 
+
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        btn2.onclick = function () {
+            modal2.style.display = "block";
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        span2.onclick = function () {
+            modal2.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+            if (event.target == modal2) {
+                modal2.style.display = "none";
+            }
+        }
+
+    </script>
+</body>
+
+</html>
